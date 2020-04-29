@@ -5,6 +5,8 @@ import ApiService from '../../service/ApiService'
 import Loading from '../../commons/Loading'
 import MessageBox from '../../commons/MessageBox'
 import Comment from '../../commons/Comment';
+import Post from '../../commons/Post';
+import {CommentContainer} from '../../style/styles'
 
 class PostDetails extends Component {
 
@@ -23,11 +25,18 @@ class PostDetails extends Component {
   componentDidMount(){
     const {postId} = this.props.match.params;
     this.setState({loadingVisible:true});
-    ApiService.findCommentByPost(postId)
+    ApiService.findPostBy(postId)
       .then(res => {
-        this.setState({comments : res});
-        this.setState({loadingVisible:false});
-      });
+        
+        this.setState({post : res});
+
+        ApiService.findCommentByPost(postId)
+        .then(res => {
+          this.setState({comments : res});
+          this.setState({loadingVisible:false});
+        });
+    });
+      
   }
 
   render(){
@@ -36,9 +45,13 @@ class PostDetails extends Component {
         <Loading visible={this.state.loadingVisible}/>
         <Header/>
         <MessageBox message={this.state.message}/>
-        {this.state.comments.map(comment => 
-          <Comment key={comment.id} content={comment}/>
-        )}
+        <Post content={this.state.post}/>
+        <h4>Comentários</h4>
+        <CommentContainer>
+          {this.state.comments.map(comment => 
+            <Comment key={comment.id} content={comment}/>
+          )}
+        </CommentContainer>
       </Fragment>
     );
   }

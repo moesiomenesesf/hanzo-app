@@ -5,6 +5,11 @@ const ApiService = {
             .then(res => res.json());
     },
 
+    findPostBy: postId => {
+        return fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
+            .then(res => res.json());
+    },
+
     findCommentByPost: postId => {
         return fetch(`https://jsonplaceholder.typicode.com/comments?postId=${postId}`)
             .then(res => res.json());

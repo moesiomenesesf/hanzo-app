@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import variables from './variables';
 
 export const Container = styled.div`
     display: flex;
@@ -17,10 +18,11 @@ export const Card = styled.div`
     flex-direction: column;
     align-items: center;
     transition: background-color .2s linear;
+    background-color: ${variables.backgroundColor};
     
     &:hover{
         transition: background-color .2s linear;
-        background-color:#f7d9ea;
+        background-color:${variables.secondaryColor};
         cursor:pointer;
     }
 
@@ -56,7 +58,7 @@ export const UserImage = styled.div`
 
 export const HeaderBar = styled.div`
     width: 100%;
-    background-color: #ff0090;
+    background-color: ${variables.primaryColor};
     height: 50px;
     position: fixed;
     top: 0;
@@ -76,7 +78,7 @@ export const Bar = styled.input`
     height: 25px;
     padding-inline-start: 5px;
     border-radius: 2px;
-    border: 1px solid #dfdfdf;
+    border: 1px solid ${variables.borderColor};
     z-index:1;
 
     &::-webkit-outer-spin-button,
@@ -95,7 +97,7 @@ export const SearchContainer = styled.div`
         position: absolute;
         top: 7px;
         right: 1px;
-        color: #f7d9ea;
+        color: ${variables.secondaryColor};
     }
 `;
 
@@ -104,9 +106,9 @@ export const Message = styled.label`
     text-align: center;
     font-size: 14px;
     margin-top: 10px;
-    background-color: #ff009029;
+    background-color: ${variables.secondaryColor};
     padding: 20px;
-    color: rgba(0,0,0,0.6);
+    color: ${variables.textColor}A5;
 `;
 
 export const LoadingContainer = styled.div`
@@ -116,10 +118,16 @@ export const LoadingContainer = styled.div`
     z-index: 5;
     width: 100%;
     height: 100%;
-    background-color: rgba(255,255,255,0.5);
+    background-color: ${variables.backgroundColor}A5;
     display: flex;
     justify-content: center;
     img{
         width: 80px;
     }
+`;
+
+export const CommentContainer = styled.div`
+    width: 100%;
+    background-color: ${variables.borderColor};
+    border: 1px solid ${variables.borderColor};
 `;

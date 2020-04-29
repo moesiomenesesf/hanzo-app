@@ -67,7 +67,7 @@ class Home extends Component {
         <MessageBox message={this.state.message}/>
         {this.state.posts.map(post => 
           <Link to={`/details/${post.id}`} key={post.id}>
-            <Post content={post} user={this.state.users}/>
+            <Post content={post}/>
           </Link>
         )}
       </Fragment>
