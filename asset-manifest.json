@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/hanzo-app/static/css/main.397c81e6.chunk.css",
-    "main.js": "/hanzo-app/static/js/main.da9875cb.chunk.js",
-    "main.js.map": "/hanzo-app/static/js/main.da9875cb.chunk.js.map",
+    "main.css": "/hanzo-app/static/css/main.48c4a4fa.chunk.css",
+    "main.js": "/hanzo-app/static/js/main.833e6819.chunk.js",
+    "main.js.map": "/hanzo-app/static/js/main.833e6819.chunk.js.map",
     "runtime-main.js": "/hanzo-app/static/js/runtime-main.a754b621.js",
     "runtime-main.js.map": "/hanzo-app/static/js/runtime-main.a754b621.js.map",
     "static/js/2.022cbc81.chunk.js": "/hanzo-app/static/js/2.022cbc81.chunk.js",
     "static/js/2.022cbc81.chunk.js.map": "/hanzo-app/static/js/2.022cbc81.chunk.js.map",
     "index.html": "/hanzo-app/index.html",
-    "precache-manifest.eff30662ffa657712aafdc49dc4c5876.js": "/hanzo-app/precache-manifest.eff30662ffa657712aafdc49dc4c5876.js",
+    "precache-manifest.0d67f9ed78eca88f8501b08892d3416f.js": "/hanzo-app/precache-manifest.0d67f9ed78eca88f8501b08892d3416f.js",
     "service-worker.js": "/hanzo-app/service-worker.js",
-    "static/css/main.397c81e6.chunk.css.map": "/hanzo-app/static/css/main.397c81e6.chunk.css.map",
+    "static/css/main.48c4a4fa.chunk.css.map": "/hanzo-app/static/css/main.48c4a4fa.chunk.css.map",
     "static/js/2.022cbc81.chunk.js.LICENSE.txt": "/hanzo-app/static/js/2.022cbc81.chunk.js.LICENSE.txt",
     "static/media/loading.svg": "/hanzo-app/static/media/loading.ebdf61f6.svg",
     "static/media/logo.jpg": "/hanzo-app/static/media/logo.712c6430.jpg"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.a754b621.js",
     "static/js/2.022cbc81.chunk.js",
-    "static/css/main.397c81e6.chunk.css",
-    "static/js/main.da9875cb.chunk.js"
+    "static/css/main.48c4a4fa.chunk.css",
+    "static/js/main.833e6819.chunk.js"
   ]
 }
