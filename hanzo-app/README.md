@@ -2,7 +2,7 @@
 
 [Hanzo-app](https://moesiomenesesf.github.io/hanzo-app/hanzo-app/blob/master/hanzo-app/public/index.html)
 
-Hanzo-app é um projeto que fornece todos os posts que são fornecidos pela API JsonPlaceHolder. O projeto foi divido em algumas pastas:
+Hanzo-app é um projeto que fornece todos os posts que são fornecidos pela API JsonPlaceHolder. A API, as vezes, estava lenta e, em outras, retornou problema de CORS, mas logo sumia com o erro. O projeto foi divido em algumas pastas:
 
 * Assets
 * Commons
