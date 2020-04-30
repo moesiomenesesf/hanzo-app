@@ -8,7 +8,7 @@ import PostDetails from './pages/PostDetails/PostDetails';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={'/hanzo-app'}>
       <Switch>
         <Route path='/' exact component={Home}/>
         <Route path='/details/:postId' component={PostDetails}/>
