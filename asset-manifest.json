@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/hanzo-app/static/css/main.397c81e6.chunk.css",
-    "main.js": "/hanzo-app/static/js/main.bdcb8854.chunk.js",
-    "main.js.map": "/hanzo-app/static/js/main.bdcb8854.chunk.js.map",
+    "main.js": "/hanzo-app/static/js/main.394a068f.chunk.js",
+    "main.js.map": "/hanzo-app/static/js/main.394a068f.chunk.js.map",
     "runtime-main.js": "/hanzo-app/static/js/runtime-main.a754b621.js",
     "runtime-main.js.map": "/hanzo-app/static/js/runtime-main.a754b621.js.map",
     "static/js/2.a6bb48bf.chunk.js": "/hanzo-app/static/js/2.a6bb48bf.chunk.js",
     "static/js/2.a6bb48bf.chunk.js.map": "/hanzo-app/static/js/2.a6bb48bf.chunk.js.map",
     "index.html": "/hanzo-app/index.html",
-    "precache-manifest.301ddf30cc39e2b2675bd3a8d644b1f5.js": "/hanzo-app/precache-manifest.301ddf30cc39e2b2675bd3a8d644b1f5.js",
+    "precache-manifest.ba0a2b7adc5595a3596a057bedb770ef.js": "/hanzo-app/precache-manifest.ba0a2b7adc5595a3596a057bedb770ef.js",
     "service-worker.js": "/hanzo-app/service-worker.js",
     "static/css/main.397c81e6.chunk.css.map": "/hanzo-app/static/css/main.397c81e6.chunk.css.map",
     "static/js/2.a6bb48bf.chunk.js.LICENSE.txt": "/hanzo-app/static/js/2.a6bb48bf.chunk.js.LICENSE.txt",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.a754b621.js",
     "static/js/2.a6bb48bf.chunk.js",
     "static/css/main.397c81e6.chunk.css",
-    "static/js/main.bdcb8854.chunk.js"
+    "static/js/main.394a068f.chunk.js"
   ]
 }
