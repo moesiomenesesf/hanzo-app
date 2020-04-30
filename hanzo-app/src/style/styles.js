@@ -33,7 +33,6 @@ export const Card = styled.div`
     }
 
     label{
-        width: 90%;
         line-height: 100%;
         text-align: justify;
         display: flex;
@@ -82,7 +81,7 @@ export const HeaderBar = styled.div`
 
 export const Bar = styled.input`
     width: 100%;
-    height: 25px;
+    height: 30px;
     padding-inline-start: 5px;
     border-radius: 2px;
     border: 1px solid ${variables.borderColor};
@@ -97,19 +96,32 @@ export const Bar = styled.input`
 `;
 
 export const SearchContainer = styled.div`
+    @media only screen and (max-width: 450px) {
+        input{
+            font-size: 10px;
+        }
+    }
     width: 70%;
     position: relative;
     margin: 0 auto 18px;
-    .fa-search{
+    font-size: 1em;
+    .iconBar{
         position: absolute;
-        top: 7px;
-        right: 1px;
-        color: ${variables.secondaryColor};
+        top: 0px;
+        right: -7px;
+        width: 34px;
+
+        &.fa-search{
+            top: 9px;
+            color: ${variables.primaryColor};
+        }
     }
+    
 `;
 
 export const Buttons = styled.div`
     @media only screen and (max-width: 450px) {
+
         flex-direction: column;
         button{
             align-self: center;
@@ -132,9 +144,11 @@ export const Buttons = styled.div`
         padding: 10px 20px;
         margin: 0 5px;
         align-items: flex-end;
+        justify-content: center;
         border: none;
         border-radius: 3px;
         color: rgba(0,0,0,0.55);
+        width: 150px;
 
         &:hover, label{
             cursor:pointer;
@@ -177,11 +191,28 @@ export const Buttons = styled.div`
 
 
 export const Message = styled.label`
+    transition-duration: 5s;
+    transition-property: display;
+
+    @keyframes fadeIn {
+        0% {opacity: 0;}
+        25% {opacity: 1;}
+        75% {opacity: 1;}
+        100% {opacity: 0;}
+    }
+
+    opacity: 0;
+    position: fixed;
+    animation-name: fadeIn;
+    animation-duration: 4s;
     text-align: center;
     font-size: 14px;
     margin-top: 10px;
     background-color: ${variables.secondaryColor};
     padding: 20px;
+    z-index: 5;
+    top: 0;
+    align-self: center;
     color: ${variables.textColor}A5;
 `;
 

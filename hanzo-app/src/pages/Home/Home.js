@@ -16,6 +16,7 @@ class Home extends Component {
       posts: [],
       users: [],
       loadingVisible: false,
+      searching: false,
       message: ""
     }
   }
@@ -35,6 +36,7 @@ class Home extends Component {
   }
 
   searchListener = userId => {
+    this.setState({searching : true});
     if(userId !== ""){
       ApiService.findPostByUser(userId)
       .then(res =>{
@@ -46,11 +48,13 @@ class Home extends Component {
         this.setState({
           posts:res          
         })
+        this.setState({searching : false});
       })
     }else{
       ApiService.findAllPosts()
       .then(res => {
         this.setState({posts : res});
+        this.setState({searching : false});
       });
     }
     
@@ -69,7 +73,7 @@ class Home extends Component {
       <Fragment>
         <Loading visible={this.state.loadingVisible}/>
         <Header/>
-        <SearchBar searchListener={this.searchListener}></SearchBar>
+        <SearchBar searchListener={this.searchListener} searching={this.state.searching}></SearchBar>
         <MessageBox message={this.state.message}/>
         {this.state.posts.map(post => 
             <Post key={post.id} content={post} details={null} users={this.state.users} deleteListener={this.deleteListener} />

@@ -2,7 +2,7 @@ const Tema = {
     primaryColor: "#FF0090",
     secondaryColor: "#F7D9EA",
     terciaryColor: "#FFD6ED",
-    textColor: "#111",
+    textColor: "#111111",
     backgroundColor: "#FEFEFE",
     backgroundPost: "#F7FBFF",
     backgroundComment: "#F7F7F7",
