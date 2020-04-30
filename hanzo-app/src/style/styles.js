@@ -201,6 +201,14 @@ export const Message = styled.label`
         100% {opacity: 0;}
     }
 
+    @media only screen and (max-width: 450px) {
+            max-width: 200px;
+    }
+
+    @media only screen and (max-width: 350px) {
+            max-width: 100px;
+    }
+
     opacity: 0;
     position: fixed;
     animation-name: fadeIn;
