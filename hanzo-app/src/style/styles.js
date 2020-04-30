@@ -201,6 +201,10 @@ export const Message = styled.label`
         100% {opacity: 0;}
     }
 
+    @media only screen and (max-width: 600px) {
+            max-width: 300px;
+    }
+
     @media only screen and (max-width: 450px) {
             max-width: 200px;
     }
@@ -225,7 +229,7 @@ export const Message = styled.label`
 `;
 
 export const LoadingContainer = styled.div`
-    position: absolute;
+    position: fixed;
     top:0;
     left:0;
     z-index: 5;
