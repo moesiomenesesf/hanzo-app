@@ -45,11 +45,11 @@ class PostDetails extends Component {
         <Loading visible={this.state.loadingVisible}/>
         <Header/>
         <MessageBox message={this.state.message}/>
-        <Post content={this.state.post}/>
+        <Post content={this.state.post} details={"details selected"}/>
         <h4>Comentários</h4>
-        <CommentContainer>
+        <CommentContainer >
           {this.state.comments.map(comment => 
-            <Comment key={comment.id} content={comment}/>
+            <Comment key={comment.id} content={comment} details={"details comment"}/>
           )}
         </CommentContainer>
       </Fragment>

@@ -7,8 +7,6 @@ import Post from '../../commons/Post';
 import SearchBar from '../../commons/SearchBar'
 import Loading from '../../commons/Loading'
 import MessageBox from '../../commons/MessageBox'
-import {Link} from 'react-router-dom'
-
 class Home extends Component {
 
   constructor(props){
@@ -29,11 +27,14 @@ class Home extends Component {
       .then(res => {
         this.setState({posts : [...this.state.posts, ...res]});
         this.setState({loadingVisible:false});
+        ApiService.findAllUsers()
+          .then(res =>{
+            this.setState({users : [...this.state.users, ...res]});
+          });
       });
   }
 
   searchListener = userId => {
-    this.setState({loadingVisible:true});
     if(userId !== ""){
       ApiService.findPostByUser(userId)
       .then(res =>{
@@ -45,17 +46,22 @@ class Home extends Component {
         this.setState({
           posts:res          
         })
-        this.setState({loadingVisible:false});
       })
     }else{
       ApiService.findAllPosts()
       .then(res => {
         this.setState({posts : res});
       });
-      this.setState({loadingVisible:false});
     }
-
     
+  }
+
+  deleteListener = postId => {
+    this.setState({loadingVisible:true});
+    ApiService.deletePost(postId)
+    .then(res =>{
+      this.setState({loadingVisible:false, message: "Post excluído com sucesso."});
+    })
   }
 
   render(){
@@ -66,9 +72,7 @@ class Home extends Component {
         <SearchBar searchListener={this.searchListener}></SearchBar>
         <MessageBox message={this.state.message}/>
         {this.state.posts.map(post => 
-          <Link to={`/details/${post.id}`} key={post.id}>
-            <Post content={post}/>
-          </Link>
+            <Post key={post.id} content={post} details={null} users={this.state.users} deleteListener={this.deleteListener} />
         )}
       </Fragment>
     );

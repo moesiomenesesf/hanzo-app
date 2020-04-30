@@ -11,23 +11,30 @@ export const Container = styled.div`
 
 export const Card = styled.div`
     padding: 20px;
-    margin: 4px;
+    margin: 4px 0;
     border: 1px solid #f0f0f0;
+    position: relative;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    transition: background-color .2s linear;
-    background-color: ${variables.backgroundColor};
+    background-color: ${variables.backgroundPost};
     
-    &:hover{
-        transition: background-color .2s linear;
-        background-color:${variables.secondaryColor};
-        cursor:pointer;
+    &.selected{
+        background-color: ${variables.terciaryColor};
+    }
+
+    &.comment{
+        background-color: ${variables.backgroundComment};
+    }
+
+    &.post{
+        background-color: ${variables.backgroundPost};
     }
 
     label{
         width: 90%;
+        line-height: 100%;
         text-align: justify;
         display: flex;
         align-items: center;
@@ -42,13 +49,13 @@ export const Card = styled.div`
         text-align: justify;
         font-size: 0.9em;
     }
+
 `;
 
 export const UserImage = styled.div`
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    margin-right: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -90,15 +97,82 @@ export const Bar = styled.input`
 `;
 
 export const SearchContainer = styled.div`
-    width: 60%;
+    width: 70%;
     position: relative;
-    margin: 0 auto;
+    margin: 0 auto 18px;
     .fa-search{
         position: absolute;
         top: 7px;
         right: 1px;
         color: ${variables.secondaryColor};
     }
+`;
+
+export const Buttons = styled.div`
+    @media only screen and (max-width: 450px) {
+        flex-direction: column;
+        button{
+            align-self: center;
+            margin: 0 0 !important;
+            &.confirm{
+                margin-bottom: 5px !important;
+            }
+        }
+    }
+
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    
+    a{
+        cursor:default;
+    }
+    button{
+        display: flex;
+        padding: 10px 20px;
+        margin: 0 5px;
+        align-items: flex-end;
+        border: none;
+        border-radius: 3px;
+        color: rgba(0,0,0,0.55);
+
+        &:hover, label{
+            cursor:pointer;
+        }
+
+        svg{
+            margin-right: 5px;
+        }
+
+        label{
+            font-weight: 700;
+        }
+    
+        &.confirm{
+            background-color:${variables.confirmColor};
+            transition: background-color .2s linear;
+            margin: 0 5px 0 0;
+            &:hover{
+                transition: background-color .2s linear;
+                background-color:${variables.confirmColorHover};
+            }
+
+            &.back{
+                align-items: center;
+            }
+        }
+    
+        &.remover{
+            background-color:${variables.dangerColor};
+            transition: background-color .2s linear;
+
+            &:hover{
+                transition: background-color .2s linear;
+                background-color:${variables.dangerColorHover};
+            }
+        }
+    }
+
 `;
 
 
@@ -118,7 +192,7 @@ export const LoadingContainer = styled.div`
     z-index: 5;
     width: 100%;
     height: 100%;
-    background-color: ${variables.backgroundColor}A5;
+    background-color: ${variables.backgroundColor}DD;
     display: flex;
     justify-content: center;
     img{
@@ -128,6 +202,5 @@ export const LoadingContainer = styled.div`
 
 export const CommentContainer = styled.div`
     width: 100%;
-    background-color: ${variables.borderColor};
-    border: 1px solid ${variables.borderColor};
 `;
+

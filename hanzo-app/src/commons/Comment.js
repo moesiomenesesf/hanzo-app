@@ -11,9 +11,9 @@ class Comment extends Component{
     }
 
     render(){
-        const {content} = this.props;
+        const {content, details} = this.props;
         return(
-            <Card>
+            <Card className={details}>
                 <h3>{content.name}</h3>
                 <h4>{content.email}</h4>
                 <p>{content.body}</p>

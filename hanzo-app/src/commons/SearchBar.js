@@ -5,7 +5,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 class SearchBar extends Component{
 
-    listenerInput = event => {
+    listenerClick = event => {
         const {value} = event.target;
         this.props.searchListener(value);
     }
@@ -13,7 +13,7 @@ class SearchBar extends Component{
     render(){
         return(
             <SearchContainer>
-            <Bar type='number' onChange={this.listenerInput} placeholder="Pesquisar por ID de Usuário">
+            <Bar type='number' placeholder="Pesquisar por ID de Usuário" onChange={this.listenerClick}>
              </Bar>
              <FontAwesomeIcon icon={faSearch}/>
             </SearchContainer>
