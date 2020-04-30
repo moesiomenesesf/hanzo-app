@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ad1ba68eadba5c15a14a444d9fc30d24",
+    "revision": "49fb60f36fc89c2873cad55e56bae76c",
     "url": "/hanzo-app/index.html"
   },
   {
-    "revision": "904b324efb6faaecb203",
+    "revision": "10b09a1312b32141accf",
     "url": "/hanzo-app/static/css/main.397c81e6.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/hanzo-app/static/js/2.022cbc81.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "904b324efb6faaecb203",
-    "url": "/hanzo-app/static/js/main.c1230cf9.chunk.js"
+    "revision": "10b09a1312b32141accf",
+    "url": "/hanzo-app/static/js/main.da9875cb.chunk.js"
   },
   {
     "revision": "94e6c348856efcb19751",

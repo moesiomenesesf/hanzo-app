@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/hanzo-app/precache-manifest.5d929c80c49e568c0e4f6781c2d330c4.js"
+  "/hanzo-app/precache-manifest.eff30662ffa657712aafdc49dc4c5876.js"
 );
 
 self.addEventListener('message', (event) => {
